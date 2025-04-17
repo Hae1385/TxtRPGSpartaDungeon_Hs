@@ -152,13 +152,21 @@ namespace TxtRPGSpartaDungeon
             weapon1.HaveItem = true;
             inventory.AddEqument(amor1);
             amor1.HaveItem = true;
+
+            Console.WriteLine("촌장: 어서오게나 모험가여!");
+            Console.WriteLine("촌장: 여기는 스파르타 마을이라고하네!");
+            Console.WriteLine("촌장: 그대의 이름을 알려주겠나!");
+            Console.WriteLine("이름을 입력하면 수정할 수 없습니다.");
+            Console.WriteLine("이름을 입력해주세요");
+            Console.Write("이름: ");
+            string PlayerName = Console.ReadLine();
             
 
             for (int i = 3; i > 2; i++)
             {
                 //인트로
                 Console.Clear();
-                Console.WriteLine("스파르타 마을에 오신 여러분 환영합니다.");
+                Console.WriteLine($"스파르타 마을에 오신 여러분 환영합니다.{PlayerName}님");
                 Console.WriteLine("이곳에서 던전으로 들어가기전 활동을 할 수 있습니다.");
                 Console.WriteLine("1. 상태보기  2. 인벤토리  3.상점");
                 Console.WriteLine("원하시는 행동을 입력해주세요.");
