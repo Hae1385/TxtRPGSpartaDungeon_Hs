@@ -68,7 +68,7 @@ namespace TxtRPGSpartaDungeon
                     else
                     {
                         Console.Write($"장비{i + 1}");
-                        Console.WriteLine($"{i + 1} \\ {EqumentList[i].Name} \\ {EqumentList[i].ItemType} \\ {EqumentList[i].State} \\ {EqumentList[i].Description}");
+                        Console.WriteLine($" \\ {EqumentList[i].Name} \\ {EqumentList[i].ItemType} \\ {EqumentList[i].State} \\ {EqumentList[i].Description}");
                     }
 
                 }
