@@ -168,7 +168,7 @@ namespace TxtRPGSpartaDungeon
                 Console.Clear();
                 Console.WriteLine($"스파르타 마을에 오신 여러분 환영합니다.{PlayerName}님");
                 Console.WriteLine("이곳에서 던전으로 들어가기전 활동을 할 수 있습니다.");
-                Console.WriteLine("1. 상태보기  2. 인벤토리  3.상점");
+                Console.WriteLine("1. 상태보기  2. 인벤토리  3.상점 4.휴식하기");
                 Console.WriteLine("원하시는 행동을 입력해주세요.");
 
                 string action = Console.ReadLine();
@@ -315,6 +315,7 @@ namespace TxtRPGSpartaDungeon
                         for (int j = 3; j > 2; j++)
                         {
                             Console.Clear();
+                            Console.WriteLine("Gold : " + money);
                             shop.ShopWindow();
                             Console.WriteLine("1. 아이템 구매");
                             Console.WriteLine("0. 나가기");
@@ -334,6 +335,7 @@ namespace TxtRPGSpartaDungeon
                                 for (int k = 3; k > 2; k++)
                                 {
                                     Console.Clear();
+                                    Console.WriteLine("Gold : " + money);
                                     Console.WriteLine("구매를 원하시는 아이템을 선택해주세요.");
                                     shop.ShopWindow();
                                     Console.WriteLine("0. 나가기");
