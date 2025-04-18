@@ -389,9 +389,45 @@ namespace TxtRPGSpartaDungeon
                                 Console.WriteLine("올바른 값을 입력해주세요");
                             }
                         }
-
-
                             break;
+                        case "4":
+                        Console.Clear();
+                        Console.WriteLine("휴식하기를 선택하셨습니다.");
+                        Console.WriteLine($"500 G 를 내면 체력을 회복할 수 있습니다. 보유골드 : {money} G");
+                        Console.WriteLine("1. 휴식하기");
+                        Console.WriteLine("0. 나가기");
+                        string Bed = Console.ReadLine();
+                    
+                        int Bedout = int.Parse(Bed);
+                    
+                        for (int i = 3; i > 2; i++)
+                        {
+                            if (Bedout == 0)
+                            {
+                                Console.WriteLine("나가기");
+                                i = 0;
+                            }
+                            else if (Bedout == 1)
+                            {
+                                if (money >= 500)
+                                {
+                                    money -= 500;
+                                    playerHP = 100;
+                                    Console.WriteLine($"휴식을 완료했습니다. 남은골드 : {money}");
+                                    Console.WriteLine("아무 숫자나 입력해주세요.");
+                                    Console.ReadLine();
+                                    i = 0;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Gold가 부족합니다.");
+                                    Console.WriteLine("아무 숫자나 입력해주세요.");
+                                    Console.ReadLine();
+                                    i = 0;
+                                }
+                            }
+                        }
+                        break;
                     default:
                         Console.WriteLine("올바른 값을 입력해주세요.");
                         break;
